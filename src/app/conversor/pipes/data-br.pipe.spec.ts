@@ -5,4 +5,8 @@ describe('DataBrPipe', () => {
     const pipe = new DataBrPipe();
     expect(pipe).toBeTruthy();
   });
+  it('deve formatar a data 12-08-2021 para 08/12/2021', () => {
+    const pipe = new DataBrPipe();
+    expect(pipe.transform('12-08-2021')).toEqual('08/12/2021');
+  })
 });
